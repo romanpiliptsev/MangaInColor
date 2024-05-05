@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Manga In Color</string>
+
+    <string name="choose_button">Choose button</string>
+    <string name="result_image">Result image</string>
+    <string name="ar_button">AR button</string>
+    <string name="main_image">Main image</string>
+</resources>

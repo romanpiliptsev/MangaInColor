@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".presentation.fragments.MenuFragment">
+
+    <ImageView
+        android:id="@+id/button_cam"
+        android:layout_width="180dp"
+        android:layout_height="85dp"
+        android:contentDescription="@string/ar_button"
+        android:src="@drawable/ar_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="18dp"/>
+
+    <ImageView
+        android:id="@+id/button_choose"
+        android:layout_width="180dp"
+        android:layout_height="85dp"
+        android:contentDescription="@string/choose_button"
+        android:src="@drawable/choose_image"
+        app:layout_constraintTop_toBottomOf="@id/button_cam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"/>
+
+    <ImageView
+        android:id="@+id/button_menu"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/choose_button"
+        android:src="@drawable/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="15dp"/>
+
+    <ImageView
+        android:id="@+id/result_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/result_image"
+        tools:src="@drawable/choose_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/start_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="button_choose,button_cam" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/loaded_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="result_image,button_menu" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
